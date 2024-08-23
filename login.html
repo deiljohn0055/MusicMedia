@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e3673e2311.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <title>log in</title>
+</head>
+
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+    }
+
+    header{
+        height: 150px;
+        width: 100%;
+        background-color: black;
+        display: flex;
+        align-items: center;
+        
+                     
+    }
+
+    .logo{
+        
+        color: rgb(212, 164, 18);
+        display: flex;
+        gap: 20px;  
+        align-items: center;
+        margin-left: 80px;
+        
+        
+    }
+
+    i{
+        font-size: 60px;
+    }
+
+    h1{
+        font-size: 40px;
+        
+    }
+
+    main{
+        height: 100%;
+        width: 100%;
+        background-color: rgb(40, 40, 40);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form{
+        height: 1000px;
+        width: 1000px;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 20px;
+    }
+
+    #userName,
+    #password{
+        padding: 10px 15px;
+        width: 400px;
+        height: 60px;
+        background-color: transparent;
+        border: 1px solid gray;
+        border-radius: 8px;
+        color: white;
+    }
+
+    label{
+        margin-left: -20rem;
+        font-size: 20px;
+    }
+
+    #submit{
+        padding: 20px;
+        width: 400px;
+        font-size: 20px;
+        border-radius: 30px;
+        background-color: rgb(212, 164, 18);
+        margin-top: 50px;
+        font-weight: bold;
+        
+    }
+
+    form h1{
+        margin-bottom: 10rem;
+    }
+
+
+    
+
+    </style>
+
+    <header>
+
+        <div class="logo">
+            <i class="fa-sharp fa-regular fa-circle-play"></i>
+            <h1>Play Me</h1>
+        </div>
+        
+        
+    </header>
+
+    <main>
+        <form action="" name="myForm">
+            <h1>Log in to Play Me</h1>
+            <label for="userName">Username</label>
+            <input type="text" placeholder="Username" id="userName">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+            <input type="submit" id="submit">
+        </form>
+    </main>
+
+    <script>
+
+        var myForm = document.getElementsByName("myForm")[0];
+        
+        myForm.addEventListener('submit', function(event){
+            event.preventDefault(); 
+            
+            var userName = document.getElementById("userName").value;
+            var password = document.getElementById("password").value;
+    
+            if(userName === "User" && password === "Fixuser"){
+                
+                window.location.href = "index.html";
+            }
+            else if(userName === "" && password ===""){
+                alert("Please Enter the username and password");
+            }
+            else {
+               
+                alert("Your account is invalid please enter your valid username and password");
+            }
+    
+              
+        });
+    
+    </script>
+</body>
+</html>
